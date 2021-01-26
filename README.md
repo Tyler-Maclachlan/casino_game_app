@@ -1,4 +1,4 @@
-# whitehatgaming
+# casino_game_app
 
 ## Project setup
 ```
