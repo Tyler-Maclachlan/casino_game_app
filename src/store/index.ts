@@ -1,15 +1,19 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import { getModule } from 'vuex-module-decorators';
 
-Vue.use(Vuex)
+import Games from './modules/gamesModule';
 
-export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
+Vue.use(Vuex);
+
+
+const store = new Vuex.Store<any>({
+  state: {},
   modules: {
+    gamesModule: Games
   }
-})
+});
+
+export default store;
+
+export const GamesModule = getModule(Games, store);
